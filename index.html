@@ -1,13 +1,40 @@
 <html lang="en">
 <head>
-    <title>Messenger chat widget</title>
+    <title>Messenger chat plugin</title>
     <meta charset="utf-8" />
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId            : '182067118973901',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v2.12'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div id="particles"></div>
+
+    <div class="fb-customerchat"
+        page_id="182067118973901"
+        ref="Messenger chat plugin"
+        theme_color="#3b5998"
+        logged_in_greeting="Hi! We're here to answer any questions you may have."
+        logged_out_greeting="See you again soon!">
+    </div>
 
     <script src="particles.min.js"></script>
     <script src="app.js"></script>
