@@ -10,6 +10,8 @@
     - [x] templates
         * hyperspace (/templates/hyperspace) - https://html5up.net/uploads/demos/hyperspace/
         * solidstate (/templates/solidstate) - https://html5up.net/uploads/demos/solid-state/
-- [ ] email form
+- [x] email
+    - [x] functionality - https://www.briskforms.com/
+    - [ ] validation
 - [ ] analytics
 - [ ] search engine optimizations
