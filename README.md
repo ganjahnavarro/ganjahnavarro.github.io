@@ -3,7 +3,7 @@
 - [ ] contents
     * personal
     * contact info
-    * projects (jekyll?)
+    * projects (jekyll if will be blogging)
     * notes (will be developed from another repo)
 - [ ] design mock up
 - [ ] portfolio inspirations
