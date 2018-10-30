@@ -28,3 +28,9 @@ p.cursive.leckerli {
 p.cursive.pacifico {
     font-family: 'Pacifico', cursive;
 }
+
+p.brand {
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    font-size: 3rem;
+}
