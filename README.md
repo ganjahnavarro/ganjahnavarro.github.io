@@ -12,9 +12,16 @@
         * solidstate (/templates/solidstate) - https://html5up.net/uploads/demos/solid-state/
     - [ ] developer portfolios
         * http://seanhalpin.io/work (neat colors, seperate page for projects)
+        * http://www.rleonardi.com/interactive-resume/ (interactive resume. 10/10 would hire.)
 - [x] email
     - [x] functionality - https://www.briskforms.com/
     - [ ] validation
 - [ ] analytics
 - [ ] search engine optimizations
 - [ ] character logo
+- [ ] interactive resume
+    * battleship
+    * mario
+    * pacman
+    * flappy bird
+    * 2048
