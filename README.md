@@ -19,9 +19,12 @@
 - [ ] analytics
 - [ ] search engine optimizations
 - [ ] character logo
-- [ ] interactive resume
+- [ ] interactive resume (think of other than sidescroller)
     * battleship
     * mario
     * pacman
     * flappy bird
+    * angry bird
     * 2048
+    * candy crush
+    * ragnarok
