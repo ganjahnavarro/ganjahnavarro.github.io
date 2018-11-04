@@ -32,6 +32,11 @@
     * PostgreSQL
     (https://github.com/ganjahnavarro/mdl-desktop)
     (https://github.com/ganjahnavarro/mdl)
+- [ ] Interior Designer (3D Furniture Simulation)
+    * 3D Engine with Libgdx
+    * Collaboration Project
+    * Android
+    (https://github.com/ganjahnavarro/interior.designer)
 - [ ] Mobile Ordering
     * Android
     * SQLite
@@ -57,5 +62,5 @@
     * Collaboration Project
     * JavaFX
     * PostgreSQL
-    (https://github.com/raymond051992/game-main)
-    (https://github.com/raymond051992/game-model)
+    (https://github.com/ganjahnavarro/cycly.main)
+    (https://github.com/ganjahnavarro/cycly.model)
