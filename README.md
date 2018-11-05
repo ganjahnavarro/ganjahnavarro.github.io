@@ -19,12 +19,16 @@
 - [ ] analytics
 - [ ] search engine optimizations
 - [ ] character logo
-- [ ] interactive resume (think of other than sidescroller)
-    * battleship
-    * mario
-    * pacman
-    * flappy bird
-    * angry bird
-    * 2048
-    * candy crush
-    * ragnarok
+- [ ] interactive resume
+    * think of other than sidescroller
+    * can have multiple games built with different technologies
+    * can be made tailored to role applying for
+    * classic/mainstream game ideas
+        * battleship
+        * mario
+        * pacman
+        * flappy bird
+        * angry bird
+        * 2048
+        * candy crush
+        * ragnarok
