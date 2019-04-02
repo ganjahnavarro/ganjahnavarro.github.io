@@ -51,4 +51,7 @@ p.brand {
     max-width: 30em;
     display: inline-block;
     font-family: monospace;
+
+    padding: 0 1em;
+    font-size: 1.25em;
 }
