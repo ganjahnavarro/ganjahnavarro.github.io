@@ -34,3 +34,21 @@ p.brand {
     margin-left: 2.5rem;
     font-size: 3rem;
 }
+
+.crp .content {
+    text-align: center;
+    font-family: monospace;
+    margin-top: 5em;
+}
+
+.crp p.title {
+    font-family: Pacifico, 'cursive';
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.crp p.message {
+    max-width: 30em;
+    display: inline-block;
+    font-family: monospace;
+}
