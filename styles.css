@@ -35,16 +35,28 @@ p.brand {
     font-size: 3rem;
 }
 
+.crp {
+    position: absolute;
+}
+
 .crp .content {
     text-align: center;
     font-family: monospace;
     margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 .crp p.title {
     font-family: Pacifico, 'cursive';
     font-size: 2em;
     margin-bottom: 1em;
+}
+
+.crp p.date {
+    font-family: monospace;
+    font-size: 1em;
+    margin-bottom: 3em;
+    margin-top: -0.25em;
 }
 
 .crp p.message {
@@ -54,4 +66,10 @@ p.brand {
 
     padding: 0 1em;
     font-size: 1.25em;
+}
+
+.crp p.footnote {
+    font-family: monospace;
+    font-size: 1em;
+    margin-top: 2em;
 }
