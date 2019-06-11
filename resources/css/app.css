@@ -394,7 +394,7 @@ a.srf, p.srf {
 }
 
 #lp #body {
-    background: #D4E507 url("../images/net.png") no-repeat left bottom;
+    background: #D4E507 url("../images/net.png") no-repeat left top;
     background-size: 100%;
 
     width: calc(100% - 60px);
