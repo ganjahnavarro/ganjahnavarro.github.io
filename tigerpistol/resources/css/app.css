@@ -1,0 +1,505 @@
+html {
+    overflow-x: hidden;
+}
+
+.mobile-warning {
+    display: none;
+}
+
+@font-face {
+    font-family: 'SHAOLIN-Display';
+    src:
+        url('../fonts/Shaolin/SHAOLIN-Display.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Shaolin/SHAOLIN-Display.otf') format('opentype'),
+        url('../fonts/Shaolin/SHAOLIN-Display.woff') format('woff'),
+        url('../fonts/Shaolin/SHAOLIN-Display.ttf') format('truetype'),
+        url('../fonts/Shaolin/SHAOLIN-Display.svg#SHAOLIN-Display') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a, p {
+    color: #000000;
+    text-decoration: none;
+    font-family: SHAOLIN-Display;
+}
+
+a.srf, p.srf {
+    font-family: p22-mackinac-pro, serif;
+}
+
+#app a:hover {
+    color: #222222;
+}
+
+.screen-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.animated {
+    visibility: hidden;
+}
+
+.animated.fadeInUp,
+.animated.fadeInLeft {
+    visibility: visible;
+}
+
+#home .container {
+    width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.diver {
+    z-index: 20;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    top: 50%;
+}
+
+#home .row-one {
+    height: 75px;
+    width: 100%;
+}
+
+#home #ripple {
+    position: absolute;
+    pointer-events: none;
+    top: -280px;
+    left: -270px;
+}
+
+#home #logo {
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+
+#home #contact-us {
+    color: white;
+    background-color: black;
+    border: 0;
+    padding: 5px 25px;
+    border-radius: 25px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+#home #navbar ul {
+    font-family: SHAOLIN-Display;
+    font-size: 15px;
+    margin: 0 78px;
+}
+
+#home #navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#home #navbar ul li a {
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+}
+
+#home #navbar ul li a:hover,
+#home #navbar ul li a.active {
+    border-color: black;
+}
+
+#home .hard-to-define {
+    margin-top: 65px;
+}
+
+#home .hard-to-define p {
+    font-size: 116px;
+    line-height: 120%;
+}
+
+#home .bridge-scene {
+    position: relative;
+    height: 1200px;
+    background: white url("../images/mountain-1.png") no-repeat center bottom;
+}
+
+#home .bridge-scene .cloud {
+    position: absolute;
+}
+
+#home .bridge-scene .cloud.one {
+    left: 0;
+}
+
+#home .bridge-scene .cloud.two {
+    right: 0;
+}
+
+#home .bridge-scene p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#home .bridge-scene p.title {
+    font-size: 53px;
+    font-family: SHAOLIN-Display;
+    width: 485px;
+    padding-top: 620px;
+}
+
+#home .bridge-scene p.description {
+    font-size: 17px;
+    line-height: 1.25;
+    margin-top: 100px;
+}
+
+#home .wave-scene {
+    position: relative;
+    height: 80px;
+}
+
+#home .wave-scene .wave {
+    position: absolute;
+}
+
+#home .wave-scene .wave.back.one {
+    top: -20px;
+}
+
+#home .wave-scene .wave.back.two {
+    top: -20px;
+    left: 1484px;
+}
+
+#home .wave-scene .wave.front.one {
+    top: 20px;
+    left: -25px;
+}
+
+#home .wave-scene .wave.front.two {
+    top: 20px;
+    left: 1458.53px;
+}
+
+#home .how,
+#home .how .container {
+    height: 780px;
+    position: relative;
+}
+
+#home .how .content {
+    top: 50%;
+    position: absolute;
+    margin: 0 5%;
+    transform: translateY(-50%);
+}
+
+#home .how .content > div {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#home .how .number {
+    color: white;
+    font-size: 96px;
+    font-family: SHAOLIN-Display;
+}
+
+#home .how .title {
+    font-size: 53px;
+    font-family: SHAOLIN-Display;
+}
+
+#home .how .description {
+    font-size: 17px;
+}
+
+#home .how.one {
+    background-color: #4DB9E6;
+}
+
+#home .how.one .number {
+    vertical-align: top;
+    display: inline-block;
+    width: 50px;
+}
+
+#home .how.one .title {
+    display: inline-block;
+    width: calc(100% - 77px);
+
+    border-left: 2px solid black;
+    padding-left: 25px;
+}
+
+#home .how.one .description {
+    padding: 0 30px;
+}
+
+#home .how.one img.map {
+    position: absolute;
+    bottom: -30px;
+}
+
+#home .how.two {
+    background-color: white;
+}
+
+#home .how.two .number {
+    color: black;
+    margin-top: 60px;
+}
+
+#home .how.two .content {
+    margin-right: 0;
+    margin-left: 10%;
+}
+
+#home .how.three {
+    background-color: #D1E021;
+}
+
+#home .how.three .number {
+    vertical-align: top;
+    display: inline-block;
+    width: 50px;
+    color: black;
+}
+
+#home .how.three .title {
+    display: inline-block;
+    width: calc(100% - 75px);
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+
+#home .how.three .description {
+    padding-left: 30%;
+    padding-right: 10%;
+}
+
+#home .how.three .content {
+    padding: 0 15%;
+}
+
+#home .how.three img.arrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#home .carousel-scene {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+}
+
+.carousel-scene .title {
+    font-size: 53px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.carousel-scene .glide__slide > div {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.carousel-scene .glide p.index {
+    font-size: 79px;
+    display: inline-block;
+    width: 60px;
+}
+
+.carousel-scene .glide p.message {
+    font-size: 17px;
+    display: inline-block;
+    width: calc(100% - 60px);
+    vertical-align: top;
+    line-height: 1.2;
+    margin-top: 5px;
+}
+
+.carousel-scene .glide .handheld img {
+    margin: 36px 0;
+}
+
+#home .cards-scene {
+    height: 960px;
+    position: relative;
+}
+
+#home .cards-scene > div {
+    display: inline-block;
+    height: 100%;
+    padding: 100px 50px;
+}
+
+#home .cards-scene .default {
+    text-align: right;
+    width: calc(42.5% - 100px);
+    background-color: #EDEDED;
+}
+
+#home .cards-scene .cards {
+    max-width: 450px;
+    float: right;
+}
+
+#home .cards-scene .others {
+    width: calc(57.5% - 100px);
+    vertical-align: top;
+    background-color: #4DB9E6;
+}
+
+#home .cards-scene .panel-title {
+    font-size: 43px;
+    margin-bottom: 40px;
+}
+
+#home .cards-scene .flip-card {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#home .footer-container {
+    position: relative;
+    height: 1140px;
+    overflow-y: hidden;
+    background: white url("../images/mountain-2.png") no-repeat center bottom;
+}
+
+#home .footer-container #mesh {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+
+#lp #logo {
+    margin-top: 2px;
+    margin-bottom: 8px;
+    margin-left: 80px;
+}
+
+#lp #body {
+    background: #D4E507 url("../images/net.png") no-repeat left bottom;
+    background-size: 100%;
+
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    margin-left: 60px;
+    position: absolute;
+}
+
+#lp #links {
+    margin-top: 135px;
+    margin-left: 165px;
+}
+
+#lp #links .link {
+    position: relative;
+}
+
+#lp #links .link p {
+    bottom: 0;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+#lp #links .link img {
+    top: 20px;
+    left: -30px;
+}
+
+#lp #links .link p,
+#lp #links .link img {
+    position: absolute;
+    display: none;
+}
+
+#lp #links a:hover ~ p,
+#lp #links a:hover ~ img {
+    display: block;
+}
+
+#lp #links a {
+    display: inline-block;
+    color: #FFFFFF;
+
+    font-size: 112px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lp #links a:hover,
+#lp #links a.primary:hover {
+    color: #000000;
+}
+
+#lp #links a.primary {
+    color: #F5F7FA;
+}
+
+#footer {
+    width: 100%;
+    position: absolute;
+    bottom: 27.29px;
+}
+
+#footer .content {
+    padding: 0 165px;
+}
+
+#footer .hr {
+    border-top: 1px solid black;
+    margin: 16px 0;
+}
+
+#footer #sublinks {
+    font-size: 17px;
+    display: inline-block;
+}
+
+#footer #sublinks a {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#footer #copyright {
+    float: right;
+    text-align: right;
+}
+
+#footer #copyright img {
+    margin-bottom: 18.73px;
+}
+
+#footer #copyright ul {
+    font-size: 13px;
+}
+
+#footer #copyright ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+#footer #social-icons {
+    width: 100%;
+    text-align: right;
+}
+
+#footer #social-icons img {
+    padding-right: 165px;
+}
