@@ -22,9 +22,10 @@ a, p {
     color: #000000;
     text-decoration: none;
     font-family: SHAOLIN-Display;
+    line-height: 1.15;
 }
 
-a.srf, p.srf {
+a.srf, p.srf, span.srf, h1.srf {
     font-family: p22-mackinac-pro, serif;
 }
 
@@ -53,68 +54,90 @@ a.srf, p.srf {
     visibility: visible;
 }
 
-#home .container {
+.vline, .hline {
+    background-color: black;
+    position: absolute;
+}
+
+.vline {
+    width: 1px;
+}
+
+.hline {
+    height: 1px;
+}
+
+.boxed {
     width: 1280px;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.diver {
-    z-index: 20;
-    cursor: pointer;
-    position: fixed;
-    right: 30px;
-    top: 50%;
+.ripple {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
 }
 
-#home .row-one {
+button {
+    background-color: #38cae5;
+    border: none;
+    color: white;
+    padding: 20px 0;
+    border-radius: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 280px;
+}
+
+button:hover {
+    background-color: #31b0c7;
+}
+
+#home, #about {
+    background-color: #231F20;
+}
+
+#navbar .row-one {
     height: 75px;
     width: 100%;
 }
 
-#home #ripple {
-    position: absolute;
-    pointer-events: none;
-    top: -280px;
-    left: -270px;
+#navbar .ripple.lgb {
+    left: 30px;
+    top: 30px;
 }
 
-#home #logo {
+#navbar #logo {
     position: absolute;
+    z-index: 10;
     left: 20px;
     top: 5px;
 }
 
-#home #contact-us {
-    color: white;
-    background-color: black;
-    border: 0;
-    padding: 5px 25px;
-    border-radius: 25px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-}
-
-#home #navbar ul {
+#navbar ul {
     font-family: SHAOLIN-Display;
     font-size: 15px;
     margin: 0 78px;
 }
 
-#home #navbar ul li {
+#navbar ul li {
     display: inline-block;
     margin-right: 20px;
 }
 
-#home #navbar ul li a {
+#navbar ul li a {
     padding-bottom: 5px;
     border-bottom: 3px solid transparent;
+    color: white;
+    position: relative;
+    z-index: 10;
 }
 
-#home #navbar ul li a:hover,
-#home #navbar ul li a.active {
-    border-color: black;
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    color: white;
+    border-color: white;
 }
 
 #home .hard-to-define {
@@ -124,191 +147,357 @@ a.srf, p.srf {
 #home .hard-to-define p {
     font-size: 116px;
     line-height: 120%;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+#home .bridge-lines > div {
+    width: 10px;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+}
+
+#home .bridge-lines .left {
+    height: 1850px;
+    top: -550px;
+    border-left: 3px dotted gray;
+}
+
+#home .bridge-lines .right {
+    height: 1555px;
+    top: -255px;
+    border-right: 3px dotted gray;
+}
+
+#home .bridge-arrow {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-right: 3px dotted gray;
+    z-index: 10;
+    transform: rotate(45deg);
+    left: calc(50% - 25px);
+    bottom: 40px;
+    border-bottom: 3px dotted gray;
 }
 
 #home .bridge-scene {
     position: relative;
-    height: 1200px;
-    background: white url("../images/mountain-1.png") no-repeat center bottom;
-}
-
-#home .bridge-scene .cloud {
-    position: absolute;
-}
-
-#home .bridge-scene .cloud.one {
-    left: 0;
-}
-
-#home .bridge-scene .cloud.two {
-    right: 0;
-}
-
-#home .bridge-scene p {
-    text-align: center;
-    margin: 0 auto;
 }
 
 #home .bridge-scene p.title {
     font-size: 53px;
     font-family: SHAOLIN-Display;
-    width: 485px;
-    padding-top: 620px;
 }
 
-#home .bridge-scene p.description {
-    font-size: 17px;
-    line-height: 1.25;
-    margin-top: 100px;
+#home .bridge-scene .dark {
+    padding-top: 300px;
 }
 
-#home .wave-scene {
-    position: relative;
-    height: 80px;
-}
-
-#home .wave-scene .wave {
-    position: absolute;
-}
-
-#home .wave-scene .wave.back.one {
-    top: -20px;
-}
-
-#home .wave-scene .wave.back.two {
-    top: -20px;
-    left: 1484px;
-}
-
-#home .wave-scene .wave.front.one {
-    top: 20px;
-    left: -25px;
-}
-
-#home .wave-scene .wave.front.two {
-    top: 20px;
-    left: 1458.53px;
-}
-
-#home .how,
-#home .how .container {
-    height: 780px;
-    position: relative;
-}
-
-#home .how .content {
-    top: 50%;
-    position: absolute;
-    margin: 0 5%;
-    transform: translateY(-50%);
-}
-
-#home .how .content > div {
-    width: 45%;
-    display: inline-block;
-    vertical-align: top;
-}
-
-#home .how .number {
+#home .bridge-scene .dark p.title {
+    width: 48.5%;
+    text-align: right;
     color: white;
-    font-size: 96px;
-    font-family: SHAOLIN-Display;
 }
 
-#home .how .title {
-    font-size: 53px;
-    font-family: SHAOLIN-Display;
+#home .bridge-scene .water {
+    background-color: #38CAE5;
+    height: 200px;
+    transform: skewY(-7deg);
+    transform-origin: right;
 }
 
-#home .how .description {
-    font-size: 17px;
-}
-
-#home .how.one {
-    background-color: #4DB9E6;
-}
-
-#home .how.one .number {
-    vertical-align: top;
-    display: inline-block;
-    width: 50px;
-}
-
-#home .how.one .title {
-    display: inline-block;
-    width: calc(100% - 77px);
-
-    border-left: 2px solid black;
-    padding-left: 25px;
-}
-
-#home .how.one .description {
-    padding: 0 30px;
-}
-
-#home .how.one img.map {
-    position: absolute;
-    bottom: -30px;
-}
-
-#home .how.two {
+#home .bridge-scene .light {
+    padding-top: 200px;
     background-color: white;
 }
 
-#home .how.two .number {
+#home .bridge-scene .light p.title {
+    margin-left: 52.5%;
+    width: 48.5%;
     color: black;
-    margin-top: 60px;
+}
+
+#home .bridge-scene .light p.description {
+    width: 48.5%;
+    font-size: 25px;
+    padding-top: 100px;
+    padding-bottom: 125px;
+    text-align: right;
+}
+
+#home .how,
+#home .how .boxed {
+    position: relative;
+    background-color: white;
+}
+
+#home .how .number {
+    font-size: 33px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#home .how .title {
+    font-size: 43px;
+    font-family: SHAOLIN-Display;
+    line-height: 1.15;
+}
+
+#home .how .description {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#home .how.one {
+    height: 850px;
+}
+
+#home .how.one .content {
+    margin: 0 auto;
+    width: 670px;
+    z-index: 10;
+    position: relative;
+
+    padding-top: 210px;
+    padding-left: 130px;
+}
+
+#home .how.one .title {
+    margin: 40px 0 20px 70px;
+}
+
+#home .how.one .title span {
+    color: white;
+}
+
+#home .how.one .description {
+    max-width: 400px;
+    margin-left: 70px;
+}
+
+#home .how.one .vline {
+    top: -25px;
+    left: -30px;
+}
+
+#home .how.one .hline {
+    top: -25px;
+    left: -90px;
+}
+
+#home .how.one .circle {
+    background-color: #38CAE5;
+    width: 830px;
+    height: 830px;
+    position: absolute;
+    border-radius: 50%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#home .how.two {
+    padding: 60px 0;
 }
 
 #home .how.two .content {
-    margin-right: 0;
-    margin-left: 10%;
+    width: 900px;
+    margin: 0 auto;
+}
+
+#home .how.two img {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+    margin-left: 165px;
+}
+
+#home .how.two .number {
+    margin-bottom: 30px;
+}
+
+#home .how.two .hline {
+    top: 105px;
+}
+
+#home .how.two .messages {
+    width: 390px;
+    display: inline-block;
 }
 
 #home .how.three {
-    background-color: #D1E021;
+    height: 850px;
 }
 
 #home .how.three .number {
-    vertical-align: top;
-    display: inline-block;
-    width: 50px;
-    color: black;
+    margin-bottom: 30px;
 }
 
-#home .how.three .title {
-    display: inline-block;
-    width: calc(100% - 75px);
-    padding-left: 25px;
-    padding-bottom: 25px;
-}
-
-#home .how.three .description {
-    padding-left: 30%;
-    padding-right: 10%;
+#home .how.three .hline {
+    left: -40px;
+    top: 50px;
 }
 
 #home .how.three .content {
-    padding: 0 15%;
+    position: absolute;
+    right: 50%;
+    top: 90px;
+    z-index: 1;
 }
 
-#home .how.three img.arrow {
+#home .how.three .description {
+    margin-top: 20px;
+    width: 450px;
+}
+
+#home .how.three img {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 32.5%;
+    top: -140px;
+}
+
+#home .how.three .ripple.sm {
+    left: 65%;
+    top: 90px;
+}
+
+#home .how.three .ripple.md {
+    left: 60%;
+    top: 360px;
+}
+
+#home .how.three .ripple.lg {
+    left: 80%;
+    top: 480px;
+}
+
+#home .how.five {
+    height: 930px;
+}
+
+#home .how.five .number {
+    margin-bottom: 30px;
+}
+
+#home .how.five .hline {
+    left: -25px;
+    top: 50px;
+}
+
+#home .how.five .vline {
+    top: 5px;
+    left: -25px;
+}
+
+#home .how.five .content {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 280px;
+}
+
+#home .how.five .description {
+    margin-top: 20px;
+    width: 480px;
+}
+
+#home .how.five img.monkey {
+    position: absolute;
+    z-index: 10;
+    right: calc(50% + 80px);
+}
+
+#home .how.five .monkeybg.skewed {
+    top: 110px;
+    transform: skewY(-10deg);
+    transform-origin: right;
+}
+
+#home .how.five .monkeybg {
+    height: 550px;
+    width: 100%;
+    position: absolute;
+    top: 400px;
+    background-color: #38CAE5;
+}
+
+#home .how.five img.whitefd {
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+}
+
+#home .customers-scene {
+    background-color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#home .customers-scene .title {
+    font-size: 106px;
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+#home .customers-scene .customers {
+    padding: 50px 0;
+}
+
+#home .customers-scene .customer {
+    display: inline-block;
+    margin: 0 20px;
+    width: 250px;
+}
+
+#home .customers-scene .customer img {
+    display: block;
+    margin: 0 auto;
+}
+
+#home .customers-scene .customer hr {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+#home .customers-scene .customer .message {
+    font-size: 17px;
+    line-height: 1.25;
+}
+
+#home .customers-scene .customer .count {
+    font-family: SHAOLIN-Display;
+    display: block;
+    font-size: 79px;
+    font-weight: bold;
+}
+
+#home .customers-scene button.action {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 520px;
+    padding: 25px 0;
 }
 
 #home .carousel-scene {
+    padding-bottom: 50px;
+    background-color: white;
+}
+
+#home .carousel-scene > div {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 150px;
+    margin: 0 auto;
 }
 
 .carousel-scene .title {
     font-size: 53px;
-    margin-top: 100px;
-    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .carousel-scene .glide__slide > div {
@@ -335,77 +524,223 @@ a.srf, p.srf {
     margin: 36px 0;
 }
 
-#home .cards-scene {
+#home .footer-wrapper {
+    height: 950px;
+}
+
+#about h1 {
+    margin-top: 65px;
+}
+
+#about h1 {
+    font-size: 88px;
+    line-height: 120%;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+#about .shrimp {
+    height: 940px;
+    position: absolute;
+    left: -130px;
+    top: 100px;
+}
+
+#about .panel {
+    height: 1200px;
+    position: relative;
+}
+
+#about .messages {
+    max-width: 515px;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+}
+
+#about .messages p {
+    color: white;
+    line-height: 1.5;
+}
+
+#about .messages .question {
+    font-size: 42px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+#about .messages .action {
+    font-size: 42px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+#about .skewed {
+    height: 260px;
+    top: -130px;
+    transform: skewY(-10deg);
+    position: absolute;
+    background-color: white;
+    width: 100%;
+}
+
+#about .footer-wrapper {
+    height: 250px;
+}
+
+#benefits h1,
+#benefits .description,
+#benefits .im-a,
+#benefits .dropdown {
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+#benefits h1 {
+    font-size: 106px;
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+#benefits .description {
+    font-size: 25px;
+    line-height: 1.25;
+}
+
+#benefits .im-a {
+    font-size: 42px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+#benefits .dropdown button {
+    width: 400px;
+}
+
+#benefits .skewed {
+    height: 1170px;
+    background-color: #231F20;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transform: skewY(-10deg);
+    transform-origin: left;
+}
+
+#benefits .accordions {
+    padding-top: 250px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#benefits .accordions .item {
+    width: 440px;
+    display: inline-block;
+    margin: 20px;
+}
+
+#benefits .accordions .item > div {
+    display: flex;
+    align-items: center;
+}
+
+#benefits .accordions .item img {
+    margin-right: 20px;
+}
+
+#benefits .accordions .item p {
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+#benefits p.loyalty {
+    font-size: 26px;
+    margin: 40px 0 80px;
+    text-align: center;
+}
+
+#benefits .cards-scene {
     height: 960px;
     position: relative;
 }
 
-#home .cards-scene > div {
+#benefits .cards-scene > div {
     display: inline-block;
     height: 100%;
     padding: 100px 50px;
 }
 
-#home .cards-scene .default {
+#benefits .cards-scene .default {
     text-align: right;
     width: calc(42.5% - 100px);
     background-color: #EDEDED;
 }
 
-#home .cards-scene .cards {
+#benefits .cards-scene .cards {
     max-width: 450px;
     float: right;
 }
 
-#home .cards-scene .others {
+#benefits .cards-scene .others {
     width: calc(57.5% - 100px);
     vertical-align: top;
-    background-color: #4DB9E6;
+    background-color: #231F20;
 }
 
-#home .cards-scene .panel-title {
+#benefits .cards-scene .others .panel-title {
+    color: white;
+}
+
+#benefits .cards-scene .panel-title {
     font-size: 43px;
     margin-bottom: 40px;
 }
 
-#home .cards-scene .flip-card {
+#benefits .cards-scene .flip-card {
     margin-left: 10px;
     margin-bottom: 10px;
 }
 
-#home .footer-container {
-    position: relative;
-    height: 1140px;
-    overflow-y: hidden;
-    background: white url("../images/mountain-2.png") no-repeat center bottom;
+#benefits .footer-wrapper {
+    height: 950px;
+    padding-top: 50px;
 }
 
-#home .footer-container #mesh {
+#home .footer-wrapper .action,
+#benefits .footer-wrapper .action {
     position: absolute;
+    top: 50%;
+    text-align: center;
     width: 100%;
-    top: 0;
+    transform: translateY(-50%);
 }
 
+#home .footer-wrapper .action p,
+#benefits .footer-wrapper .action p {
+    font-size: 42px;
+    margin-bottom: 50px;
+}
 
-#lp #logo {
-    margin-top: 2px;
-    margin-bottom: 8px;
-    margin-left: 80px;
+.footer-wrapper {
+    position: relative;
+    background-color: white;
 }
 
 #lp #body {
-    background: #D4E507 url("../images/net.png") no-repeat left top;
-    background-size: 100%;
+    background: white url("../images/dot-map-lp.png") no-repeat left top;
+    background-size: 110%;
 
-    width: calc(100% - 60px);
-    height: calc(100% - 60px);
-    margin-left: 60px;
+    width: 100%;
+    height: 100%;
     position: absolute;
 }
 
 #lp #links {
-    margin-top: 135px;
-    margin-left: 165px;
+    margin-top: 140px;
+    margin-left: 48px;
 }
 
 #lp #links .link {
@@ -418,38 +753,42 @@ a.srf, p.srf {
     pointer-events: none;
 }
 
-#lp #links .link img {
-    top: 20px;
-    left: -30px;
-}
-
-#lp #links .link p,
-#lp #links .link img {
+#lp #links .link p {
     position: absolute;
     display: none;
 }
 
-#lp #links a:hover ~ p,
-#lp #links a:hover ~ img {
+#lp #links a:hover ~ p {
     display: block;
 }
 
 #lp #links a {
     display: inline-block;
-    color: #FFFFFF;
-
     font-size: 112px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#lp #links a:hover,
-#lp #links a.primary:hover {
-    color: #000000;
+#lp #links a:hover {
+    color: #38CAE5;
 }
 
-#lp #links a.primary {
-    color: #F5F7FA;
+#lp .ripple.sm {
+    position: absolute;
+    right: 45%;
+    top: 70%;
+}
+
+#lp .ripple.md {
+    position: absolute;
+    right: 22.5%;
+    top: 12.5%;
+}
+
+#lp .ripple.lg {
+    position: absolute;
+    right: 8%;
+    top: 50%;
 }
 
 #footer {
@@ -459,7 +798,7 @@ a.srf, p.srf {
 }
 
 #footer .content {
-    padding: 0 165px;
+    padding: 0 40px;
 }
 
 #footer .hr {
@@ -475,6 +814,11 @@ a.srf, p.srf {
 #footer #sublinks a {
     margin-bottom: 10px;
     display: inline-block;
+}
+
+#footer #sublinks a:hover,
+#footer #sublinks a.active {
+    color: #38cae5;
 }
 
 #footer #copyright {
@@ -501,5 +845,5 @@ a.srf, p.srf {
 }
 
 #footer #social-icons img {
-    padding-right: 165px;
+    padding-right: 40px;
 }

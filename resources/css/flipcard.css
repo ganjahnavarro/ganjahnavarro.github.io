@@ -51,8 +51,13 @@
     font-size: 32px;
 }
 
-.flip-card .back {
+.flip-card .front {
+    font-size: 32px;
     background-color: #4DB9E6;
+}
+
+.flip-card .back {
+    background-color: #231F20;
     transform: rotateY(180deg);
 }
 
