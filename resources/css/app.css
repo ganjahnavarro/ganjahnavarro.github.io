@@ -6,6 +6,14 @@ html {
     display: none;
 }
 
+.circle {
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @font-face {
     font-family: 'SHAOLIN-Display';
     src:
@@ -79,6 +87,25 @@ a.srf, p.srf, span.srf, h1.srf {
     z-index: 1;
 }
 
+.street-grid {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.trg {
+    position: absolute;
+    cursor: pointer;
+}
+
+.trg .hoverable {
+    position: absolute;
+}
+
+.trg:hover .hoverable {
+    display: none;
+}
+
 button {
     background-color: #38cae5;
     border: none;
@@ -98,27 +125,42 @@ button:hover {
     background-color: #231F20;
 }
 
-#navbar .row-one {
-    height: 75px;
-    width: 100%;
+#navbar {
+    position: relative;
+    background-color: #231F20;
+    z-index: 1;
 }
 
-#navbar .ripple.lgb {
-    left: 30px;
-    top: 30px;
+#navbar .row-one {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#navbar .trg {
+    right: 115px;
+}
+
+#navbar .menu-trigger {
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+}
+
+#navbar .circle-container {
+    left: 72.5px;
+    top: 55px;
+    position: absolute;
 }
 
 #navbar #logo {
-    position: absolute;
-    z-index: 10;
-    left: 20px;
-    top: 5px;
+    margin-left: 50px;
 }
 
 #navbar ul {
-    font-family: SHAOLIN-Display;
     font-size: 15px;
-    margin: 0 78px;
+    margin: 0 105px;
 }
 
 #navbar ul li {
@@ -142,45 +184,27 @@ button:hover {
 
 #home .hard-to-define {
     margin-top: 65px;
+    padding: 0 50px;
 }
 
 #home .hard-to-define p {
-    font-size: 116px;
-    line-height: 120%;
+    font-size: 109px;
+    line-height: 1.1;
     color: white;
     position: relative;
     z-index: 10;
 }
 
-#home .bridge-lines > div {
-    width: 10px;
+#home .street-grid {
+    bottom: 500px;
+}
+
+#home .long-arrow {
     position: absolute;
+    top: -490px;
+    z-index: 8;
     left: 50%;
-    z-index: 1;
-}
-
-#home .bridge-lines .left {
-    height: 1750px;
-    top: -550px;
-    border-left: 3px dotted gray;
-}
-
-#home .bridge-lines .right {
-    height: 1455px;
-    top: -255px;
-    border-right: 3px dotted gray;
-}
-
-#home .bridge-arrow {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-right: 3px dotted gray;
-    z-index: 10;
-    transform: rotate(45deg);
-    left: calc(50% - 25px);
-    bottom: 40px;
-    border-bottom: 3px dotted gray;
+    transform: translateX(-50%);
 }
 
 #home .bridge-scene {
@@ -192,32 +216,32 @@ button:hover {
     font-family: SHAOLIN-Display;
 }
 
-#home .bridge-scene .dark {
-    padding-top: 300px;
-    padding-bottom: 100px;
-}
-
 #home .bridge-scene .dark p.title {
     width: 48.5%;
     text-align: right;
     z-index: 1;
     color: white;
     position: relative;
+
+    padding-top: 300px;
+    padding-bottom: 140px;
 }
 
 #home .bridge-scene .water-panel {
     transform: skewY(-7deg);
-    transform-origin: right;
+    transform-origin: center;
     position: absolute;
+    z-index: 1;
     width: 100%;
-    top: 320px;
+    top: 535px;
 }
 
-#home .bridge-scene .water-dark {
+#home .bridge-scene .skewed-fill {
     width: 50%;
-    height: 100px;
-    background-color: #231f20;
-    z-index: 1;
+    margin-left: 50%;
+    height: 110px;
+    background-color: white;
+    position: relative;
 }
 
 #home .bridge-scene .water {
@@ -226,8 +250,9 @@ button:hover {
 }
 
 #home .bridge-scene .light {
-    padding-top: 200px;
+    padding-top: 60px;
     background-color: white;
+    position: relative;
 }
 
 #home .bridge-scene .light p.title {
@@ -240,7 +265,7 @@ button:hover {
     width: 48.5%;
     font-size: 25px;
     padding-top: 100px;
-    padding-bottom: 125px;
+    padding-bottom: 135px;
     text-align: right;
 }
 
@@ -303,7 +328,7 @@ button:hover {
     left: -90px;
 }
 
-#home .how.one .circle {
+#home .how.one .circle-bg {
     background-color: #38CAE5;
     width: 830px;
     height: 830px;
@@ -376,6 +401,38 @@ button:hover {
     top: -140px;
 }
 
+#home .how.four {
+    height: 500px;
+    padding-top: 50px;
+}
+
+#home .how.four .hline {
+    position: absolute;
+    top: 95px;
+}
+
+#home .how.four .content {
+    text-align: right;
+    position: absolute;
+    right: 50%;
+}
+
+#home .how.four .title {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#home .how.four .description {
+    max-width: 420px;
+}
+
+#home .how.four img {
+    left: 50%;
+    top: 135px;
+    position: absolute;
+    margin-left: 80px;
+}
+
 #home .how.three .ripple.sm {
     left: 65%;
     top: 90px;
@@ -424,7 +481,8 @@ button:hover {
 #home .how.five img.monkey {
     position: absolute;
     z-index: 10;
-    right: calc(50% + 80px);
+    padding-right: 80px;
+    opacity: 0;
 }
 
 #home .how.five .monkeybg.skewed {
@@ -437,15 +495,21 @@ button:hover {
     width: 100%;
     position: absolute;
     z-index: 5;
-    top: 400px;
+    top: 350px;
     background-color: #38CAE5;
 }
 
 #home .how.five img.whitefd {
     position: absolute;
     width: 100%;
+    height: 1000px;
     top: 60px;
     z-index: 6;
+}
+
+#home .action .trg {
+    position: relative;
+    display: inline-block;
 }
 
 #home .customers-scene {
@@ -494,41 +558,42 @@ button:hover {
     font-weight: bold;
 }
 
-#home .customers-scene button.action {
+#home .customers-scene .trg {
     margin-top: 50px;
-    margin-bottom: 100px;
-    width: 520px;
     padding: 25px 0;
+    position: relative;
 }
 
 #home .carousel-scene {
-    padding-bottom: 50px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
 }
 
 #home .carousel-scene > div {
     width: 80%;
-    margin: 0 auto;
+    position: relative;
 }
 
-.carousel-scene .title {
+#home .carousel-scene .title {
     font-size: 53px;
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
-.carousel-scene .glide__slide > div {
+#home .carousel-scene .glide__slide > div {
     width: 75%;
     margin: 0 auto;
 }
 
-.carousel-scene .glide p.index {
+#home .carousel-scene .glide p.index {
     font-size: 79px;
     display: inline-block;
     width: 60px;
 }
 
-.carousel-scene .glide p.message {
+#home .carousel-scene .glide p.message {
     font-size: 17px;
     display: inline-block;
     width: calc(100% - 60px);
@@ -537,17 +602,14 @@ button:hover {
     margin-top: 5px;
 }
 
-.carousel-scene .glide .handheld img {
+#home .carousel-scene .glide .handheld img {
     margin: 36px 0;
 }
 
 #about h1 {
     margin-top: 65px;
-}
-
-#about h1 {
     font-size: 88px;
-    line-height: 120%;
+    line-height: 1.1;
     color: white;
     position: relative;
     z-index: 1;
@@ -563,6 +625,11 @@ button:hover {
 #about .panel {
     height: 1200px;
     position: relative;
+    z-index: 1;
+}
+
+#about .street-grid {
+    top: 420px;
 }
 
 #about .messages {
@@ -598,24 +665,26 @@ button:hover {
     width: 100%;
 }
 
-#about .footer-wrapper {
-    height: 250px;
-}
-
 #benefits h1,
 #benefits .description,
 #benefits .im-a,
 #benefits .dropdown {
     color: white;
     position: relative;
-    z-index: 1;
+    z-index: 5;
     text-align: center;
+}
+
+#benefits .welcome-panel {
+    height: 1050px;
+    background-color: #231F20;
+    position: relative;
 }
 
 #benefits h1 {
     font-size: 106px;
-    margin-top: 90px;
-    margin-bottom: 60px;
+    padding-top: 90px;
+    padding-bottom: 60px;
 }
 
 #benefits .description {
@@ -633,20 +702,32 @@ button:hover {
     width: 400px;
 }
 
+#benefits .street-grid {
+    bottom: -425px;
+    z-index: 1;
+}
+
 #benefits .skewed {
-    height: 1170px;
-    background-color: #231F20;
-    position: absolute;
+    height: 300px;
+    background-color: white;
     width: 100%;
-    top: 0;
     transform: skewY(-7deg);
     transform-origin: left;
+    position: absolute;
+    z-index: 1;
 }
 
 #benefits .accordions {
-    padding-top: 250px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+#benefits .accordions > div {
     max-width: 960px;
     margin: 0 auto;
+    position: relative;
+    z-index: 5;
 }
 
 #benefits .accordions .item {
@@ -671,25 +752,80 @@ button:hover {
 
 #benefits p.loyalty {
     font-size: 26px;
-    margin: 40px 0 80px;
+    padding-top: 40px;
     text-align: center;
+}
+
+#benefits .carousel-scene {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+    position: relative;
+    z-index: 1;
+}
+
+#benefits .carousel-scene > div {
+    width: 80%;
+    position: relative;
+}
+
+#benefits .carousel-scene .title {
+    font-size: 42px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+#benefits .carousel-scene .title span {
+    font-size: 31px;
+    font-style: italic;
+}
+
+#benefits .carousel-scene .glide__slide > div {
+    width: 75%;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+#benefits .carousel-scene .glide img {
+    height: 200px;
+}
+
+#benefits .carousel-scene .glide p.index {
+    font-size: 33px;
+    font-family: p22-mackinac-pro, serif;
+    position: absolute;
+    top: 175px;
+}
+
+#benefits .carousel-scene .glide p.message {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 20px;
+    text-align: left;
+    border-top: 1px solid black;
+    padding-top: 25px;
 }
 
 #benefits .cards-scene {
     height: 960px;
     position: relative;
+    z-index: 1;
 }
 
 #benefits .cards-scene > div {
     display: inline-block;
-    height: 100%;
+    height: 760px;
     padding: 100px 50px;
+    background-color: #EDEDED;
 }
 
 #benefits .cards-scene .default {
     text-align: right;
     width: calc(42.5% - 100px);
-    background-color: #EDEDED;
 }
 
 #benefits .cards-scene .cards {
@@ -700,11 +836,28 @@ button:hover {
 #benefits .cards-scene .others {
     width: calc(57.5% - 100px);
     vertical-align: top;
+    position: relative;
     background-color: #231F20;
 }
 
-#benefits .cards-scene .others .panel-title {
-    color: white;
+#benefits .cards-scene .others .cards {
+    max-width: 650px;
+}
+
+#benefits .cards-scene .others .content {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+#benefits .others svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#benefits .others .overlay-path {
+	fill: #EDEDED;
 }
 
 #benefits .cards-scene .panel-title {
@@ -717,11 +870,14 @@ button:hover {
     margin-bottom: 10px;
 }
 
+#benefits .action .trg {
+    position: relative;
+    display: inline-block;
+}
 
 #home img.dots,
 #benefits img.dots {
     width: 100%;
-    padding-bottom: 200px;
 }
 
 #benefits img.dots {
@@ -743,77 +899,136 @@ button:hover {
     margin-bottom: 50px;
 }
 
+#menu {
+    background-color: white;
+    position: relative;
+    z-index: 100;
+}
+
+#menu #sitemap #links {
+    padding-left: 40%;
+}
+
+#menu #sitemap #body .mapbg {
+    transform: scaleX(-1);
+}
+
+#menu #sitemap .ripple.sm {
+    left: 9%;
+    top: 25%;
+}
+
+#menu #sitemap .ripple.md {
+    left: 20%;
+    top: 50%;
+}
+
+#menu #sitemap .ripple.lg {
+    left: 6%;
+    top: 68%;
+}
+
 .footer-wrapper {
     position: relative;
     background-color: white;
 }
 
-#lp #body {
+#sitemap img.close {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    right: 45px;
+    top: 30px;
+}
+
+#sitemap img.logo {
+    position: absolute;
+    top: 35px;
+    z-index: 1;
+    left: 50px;
+}
+
+#sitemap #body .mapbg {
+    content: "";
     background: white url("../images/dot-map-lp.png") no-repeat left top;
     background-size: 110%;
 
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
 }
 
-#lp #links {
-    margin-top: 140px;
-    margin-left: 48px;
+#sitemap #links {
+    padding-top: 140px;
+    padding-left: 48px;
+
+    height: 100vh;
+    box-sizing: border-box;
 }
 
-#lp #links .link {
+#sitemap #links .link {
     position: relative;
 }
 
-#lp #links .link p {
+#sitemap #links .link p {
     bottom: 0;
     font-size: 18px;
     pointer-events: none;
 }
 
-#lp #links .link p {
+#sitemap #links .link p {
     position: absolute;
     display: none;
 }
 
-#lp #links a:hover ~ p {
+#sitemap #links a:hover ~ p {
     display: block;
 }
 
-#lp #links a {
+#sitemap #links a {
     display: inline-block;
     font-size: 112px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 5;
 }
 
-#lp #links a:hover {
+#sitemap #links a:hover {
     color: #38CAE5;
 }
 
-#lp .ripple.sm {
+#sitemap #sublinks {
+    margin-top: 40px;
+}
+
+#sitemap #sublinks a {
+    font-size: 33px;
+    margin: 5px 0;
+}
+
+#sitemap .ripple.sm {
     position: absolute;
     right: 45%;
     top: 70%;
 }
 
-#lp .ripple.md {
+#sitemap .ripple.md {
     position: absolute;
     right: 22.5%;
     top: 12.5%;
 }
 
-#lp .ripple.lg {
+#sitemap .ripple.lg {
     position: absolute;
     right: 8%;
     top: 50%;
 }
 
 #footer {
+    position: relative;
     width: 100%;
-    position: absolute;
-    bottom: 27.29px;
+    padding: 20px 0 30px;
 }
 
 #footer .content {
