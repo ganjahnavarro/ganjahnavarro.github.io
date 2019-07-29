@@ -33,7 +33,15 @@ a, p {
     line-height: 1.15;
 }
 
-a.srf, p.srf, span.srf, h1.srf {
+strong {
+    font-weight: bold;
+}
+
+i {
+    font-style: oblique;
+}
+
+a.srf, p.srf, span.srf, h1.srf, div.srf {
     font-family: p22-mackinac-pro, serif;
 }
 
@@ -106,9 +114,36 @@ a.srf, p.srf, span.srf, h1.srf {
     display: none;
 }
 
+body .glide__bullets {
+    bottom: -10px;
+}
+
+body .glide__bullet.glide__bullet--active,
+body .glide__bullet.glide__bullet--active:focus {
+    background-color: #38cae5;
+}
+
+body .glide__bullet {
+    background-color: gray;
+}
+
+body .glide__bullet:hover,
+body .glide__bullet:focus {
+    background-color: lightgray;
+    border: inherit;
+}
+
+body .carousel-scene .glide__slide {
+    opacity: 0.25;
+}
+
+body .carousel-scene .glide__slide.nonpeek {
+    opacity: 1;
+}
+
 button {
     background-color: #38cae5;
-    border: none;
+    border: 1px solid transparent;
     color: white;
     padding: 20px 0;
     border-radius: 35px;
@@ -118,10 +153,12 @@ button {
 }
 
 button:hover {
-    background-color: #31b0c7;
+    background-color: white;
+    color: #231f20;
+    border: 1px solid #231f20;
 }
 
-#home, #about {
+#home, #about, #contact, #policy {
     background-color: #231F20;
 }
 
@@ -507,11 +544,6 @@ button:hover {
     z-index: 6;
 }
 
-#home .action .trg {
-    position: relative;
-    display: inline-block;
-}
-
 #home .customers-scene {
     background-color: white;
     text-align: center;
@@ -528,6 +560,8 @@ button:hover {
 
 #home .customers-scene .customers {
     padding: 50px 0;
+    display: flex;
+    justify-content: center;
 }
 
 #home .customers-scene .customer {
@@ -539,6 +573,12 @@ button:hover {
 #home .customers-scene .customer img {
     display: block;
     margin: 0 auto;
+}
+
+#home .customers-scene .customer .imgw {
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 #home .customers-scene .customer hr {
@@ -565,11 +605,15 @@ button:hover {
 }
 
 #home .carousel-scene {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
+}
+
+#home .glide__bullets {
+    bottom: -50px;
 }
 
 #home .carousel-scene > div {
@@ -656,7 +700,9 @@ button:hover {
     margin-bottom: 30px;
 }
 
-#about .skewed {
+#about .skewed,
+#contact .skewed,
+#policy .skewed {
     height: 260px;
     top: -130px;
     transform: skewY(-7deg);
@@ -698,8 +744,41 @@ button:hover {
     margin-bottom: 20px;
 }
 
-#benefits .dropdown button {
-    width: 400px;
+#benefits .dropdown {
+    width: 450px;
+    margin: 0 auto;
+}
+
+#benefits .dropdown .trigger,
+#benefits .dropdown .option {
+    background-color: #38cae5;
+    border: 1px solid transparent;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial;
+}
+
+#benefits .dropdown .trigger:hover,
+#benefits .dropdown .option:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#benefits .dropdown .trigger {
+    border-radius: 35px 35px 0 0;
+}
+
+#benefits .dropdown .trigger.closed {
+    border-radius: 35px;
+}
+
+#benefits .dropdown .option {
+    border-top: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+#benefits .dropdown .option:last-child {
+    border-radius: 0 0 35px 35px;
 }
 
 #benefits .street-grid {
@@ -707,7 +786,8 @@ button:hover {
     z-index: 1;
 }
 
-#benefits .skewed {
+#benefits .skewed,
+#brands .skewed {
     height: 300px;
     background-color: white;
     width: 100%;
@@ -724,16 +804,22 @@ button:hover {
 }
 
 #benefits .accordions > div {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
     z-index: 5;
 }
 
 #benefits .accordions .item {
-    width: 440px;
+    width: 460px;
     display: inline-block;
-    margin: 20px;
+    margin: 30px 20px;
+}
+
+#benefits .accordions .item.last {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #benefits .accordions .item > div {
@@ -757,7 +843,7 @@ button:hover {
 }
 
 #benefits .carousel-scene {
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -784,21 +870,21 @@ button:hover {
 }
 
 #benefits .carousel-scene .glide__slide > div {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
 
     text-align: center;
 }
 
 #benefits .carousel-scene .glide img {
-    height: 200px;
+    height: 160px;
 }
 
 #benefits .carousel-scene .glide p.index {
     font-size: 33px;
     font-family: p22-mackinac-pro, serif;
     position: absolute;
-    top: 175px;
+    top: 135px;
 }
 
 #benefits .carousel-scene .glide p.message {
@@ -807,7 +893,8 @@ button:hover {
     margin-top: 20px;
     text-align: left;
     border-top: 1px solid black;
-    padding-top: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 #benefits .cards-scene {
@@ -840,14 +927,29 @@ button:hover {
     background-color: #231F20;
 }
 
-#benefits .cards-scene .others .cards {
-    max-width: 650px;
-}
-
 #benefits .cards-scene .others .content {
     position: absolute;
     z-index: 1;
+}
+
+#benefits .cards-scene .others .panel-title {
+    color: white;
+}
+
+#benefits .cards-scene .others .cards {
+    max-width: 650px;
     opacity: 0;
+}
+
+#benefits .others .caret {
+    margin-left: 5px;
+    animation: colorblink .75s step-end infinite;
+}
+
+#benefits .others .tap {
+    width: 80px;
+    animation: opacityblink 2s linear infinite;
+    cursor: pointer;
 }
 
 #benefits .others svg {
@@ -870,11 +972,6 @@ button:hover {
     margin-bottom: 10px;
 }
 
-#benefits .action .trg {
-    position: relative;
-    display: inline-block;
-}
-
 #home img.dots,
 #benefits img.dots {
     width: 100%;
@@ -884,8 +981,16 @@ button:hover {
     padding-top: 50px;
 }
 
+#home .action .trg,
+#benefits .action .trg,
+#brands .action .trg {
+    position: relative;
+    display: inline-block;
+}
+
 #home .footer-wrapper .action,
-#benefits .footer-wrapper .action {
+#benefits .footer-wrapper .action,
+#brands .footer-wrapper .action {
     position: absolute;
     top: 50%;
     text-align: center;
@@ -894,9 +999,202 @@ button:hover {
 }
 
 #home .footer-wrapper .action p,
-#benefits .footer-wrapper .action p {
+#benefits .footer-wrapper .action p,
+#brands .footer-wrapper .action p {
     font-size: 42px;
     margin-bottom: 50px;
+}
+
+#contact .panel {
+    height: 800px;
+    position: relative;
+    z-index: 1;
+    padding: 80px 105px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#contact .messages {
+    padding-right: 60px;
+    width: 40%;
+}
+
+#contact p {
+    color: white;
+}
+
+#contact .title {
+    font-size: 50px;
+}
+
+#contact .description {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 36px;
+}
+
+#contact .address,
+#contact .phone,
+#contact .email {
+    line-height: 1.5;
+}
+
+#contact .legend {
+    color: gray;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+#contact form button {
+    width: 140px;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+#policy .messages .title {
+    font-size: 42px;
+    font-family: 'SHAOLIN-Display';
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#policy .messages {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 300px;
+}
+
+#policy .messages,
+#policy .messages p,
+#policy .messages span {
+    color: white;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: p22-mackinac-pro, serif;
+}
+
+#policy .messages a {
+    color: #38CAE5;
+    font-family: p22-mackinac-pro, serif;
+}
+
+#policy .messages a:hover {
+    color: #38CAE5;
+    cursor: pointer;
+}
+
+#policy .pd {
+    padding-left: 20px;
+}
+
+#brands .panel {
+    height: 650px;
+    background-color: #231F20;
+    position: relative;
+}
+
+#brands h1 {
+    color: white;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+
+    font-size: 106px;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+#brands .customers {
+    position: relative;
+    z-index: 1;
+}
+
+#brands .customers .imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+#brands .customers .imgs img {
+    margin: 0 50px;
+    cursor: pointer;
+}
+
+#brands .customers .title {
+    max-width: 1080px;
+    font-size: 32px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#brands .customers .hline {
+    margin-top: 20px;
+}
+
+#brands .o {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+#brands .i {
+    width: 80px;
+}
+
+#brands .p {
+    display: inline-block;
+    padding-left: 40px;
+    width: 60%;
+}
+
+#brands .q {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#brands .w {
+    line-height: 1.25;
+    font-size: 18px;
+}
+
+#brands .quote {
+    max-width: 1080px;
+    margin: 40px auto 80px;
+}
+
+#brands .quote .msg {
+    font-size: 36px;
+    max-width: 860px;
+    margin: 20px 40px;
+    display: inline-block;
+}
+
+#brands .quote .apostrophe {
+    font-size: 60px;
+    color: #38CAE5;
+    font-weight: bold;
+    line-height: 32px;
+    padding-top: 10px;
+    position: absolute;
+}
+
+#brands .quote .apostrophe.l {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 20px;
+}
+
+#brands .by {
+    padding-left: 40px;
+    font-size: 18px;
 }
 
 #menu {
@@ -1080,4 +1378,21 @@ button:hover {
 
 #footer #social-icons img {
     padding-right: 40px;
+}
+
+@keyframes colorblink {
+    from, to { color: transparent }
+    50% { color: white; }
+}
+
+@keyframes opacityblink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
