@@ -29,51 +29,22 @@ p.cursive.pacifico {
     font-family: 'Pacifico', cursive;
 }
 
-p.brand {
-    margin-top: 1rem;
-    margin-left: 2.5rem;
+.brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.brand .title {
     font-size: 3rem;
 }
 
-.crp {
-    position: absolute;
-    width: 100%;
+.brand .subtitle {
+    margin-top: 1rem;
+    font-size: 0.85rem;
 }
-
-.crp .content {
-    text-align: center;
-    font-family: monospace;
-    margin-top: 5em;
-    margin-bottom: 5em;
-}
-
-.crp p.title {
-    font-family: Pacifico, 'cursive';
-    font-size: 2em;
-}
-
-.crp p.date {
-    font-family: monospace;
-    font-size: 1em;
-    margin-bottom: 3em;
-    margin-top: -0.25em;
-}
-
-.crp p.message {
-    max-width: 30em;
-    display: inline-block;
-    font-family: monospace;
-
-    padding: 0 2em;
-    font-size: 1.25em;
-}
-
-.crp .ps {
-    font-size: 0.8em;
-}
-
-.crp p.footnote {
-    font-family: monospace;
-    font-size: 1em;
-    margin-top: 2em;
+.brand .subtitle span {
+    opacity: 0.25;
 }
