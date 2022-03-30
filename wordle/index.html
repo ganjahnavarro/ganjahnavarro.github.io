@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <title>gnjb.io</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="reveal/reveal.css">
+    <link rel="stylesheet" href="reveal/theme/blood.css" id="theme">
+
+    <style>
+        .reveal .controls {
+            right: 2.5rem;
+        }
+
+        .reveal .left-text {
+            text-align: left;
+        }
+
+        .reveal h3, .reveal h4 {
+            text-transform: inherit;
+        }
+
+        .instruction p, .instruction img {
+            margin: 2.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <img src="images/logo.png" alt="Logo">
+            </section>
+
+            <section class="instruction left-text" data-transition="zoom">
+                <p>Guess the WORDLE in six tries.</p>
+                <p>Each guess must be a valid five-letter word.</p>
+                <p>After each guess, the color of the tiles will change to show how close your guess was to the word.</p>
+                <img src="images/instructions-examples.png" alt="Instructions">
+
+                <br />
+                <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank">🔗</a>
+            </section>
+
+            <section>
+                Wordle 284 5/6
+
+                <p>🟩⬜⬜⬜🟩</p>
+                <p>⬜⬜⬜⬜🟩</p>
+                <p>⬜🟨⬜⬜🟨</p>
+                <p>🟩🟩🟩⬜🟩</p>
+                <p>🟩🟩🟩🟩🟩</p>
+            </section>
+
+            <section>
+                <h3>Variations</h3>
+                <br />
+
+                <div class="fragment fade-left">
+                    <p><a href="https://www.thewordfinder.com/6-letter-wordle/" target="_blank">Lingle</a> <span>- Wordle but 6 letters</span></p>
+                </div>
+
+                <div class="fragment fade-left">
+                    <p><a href="https://www.taylordle.com/" target="_blank">Taylordle</a> <span>- Wordle but for Swifties</span></p>
+                </div>
+
+                <div class="fragment fade-left">
+                    <p><a href="https://digitaltolkien.github.io/vue-wordle/" target="_blank">Lordle of the rings</a> <span>- Wordle but for LOTR fans</span></p>
+                </div>
+
+                <div class="fragment fade-left">
+                    <p><a href="https://nerdlegame.com/" target="_blank">Nerdle</a> <span>- Wordle but equations</span></p>
+                </div>
+
+                <div class="fragment fade-left">
+                    <p><a href="https://saltong.carldegs.com/" target="_blank">Saltong</a> <span>- Wordle but Anti-Megha</span></p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Squabble</h3>
+                <p>Wordle but..</p>
+                <p class="fragment"><a href=https://squabble.me/" target="_blank">we'll play it</a></p>
+            </section>
+
+            <section data-transition="concave">
+                <h3>I'm not fun at parties</h3>
+                <br/>
+
+                <p class="fragment">Tweet distribution <a href="https://www.kaggle.com/code/benhamner/wordle-1-6/notebook" target="_blank">🔗</a></p>
+                <p class="fragment">Local storage <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank">🔗</a></p>
+                <p class="fragment">Gybes nymph fjord quick waltz <a href="https://www.devangthakkar.com/wordle_archive/?1">🔗</a> </p>
+            </section>
+
+            <section>
+                <img src="images/end.png" alt="Thanks">
+            </section>
+        </div>
+    </div>
+
+    <script src="reveal/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            center: true,
+            history: true,
+            margin: .5
+        });
+    </script>
+</body>
+</html>
