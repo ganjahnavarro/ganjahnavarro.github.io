@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <title>gnjb.io</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="../reveal/reveal.css">
+    <link rel="stylesheet" href="../reveal/theme/white.css" id="theme">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="left-text">
+                <h2>Cryptography 101</h2>
+                <p class="fragment">- is the practice of secure communication in the presence of potential third party adversaries.</p>
+                <p class="fragment">- >is the practice and study of techniques for securing communication and data in the presence of adversaries (and much more).</p>
+            </section>
+
+            <!--
+            <section class="left-text">
+                <p>Alice talks to Bob (private notes)</p>
+                - Want to send a message in a public forum "Will you marry me?" e.g. internet
+                - Need to secure from someone (adversaries), Eve
+                - Eavesdropping, altering the message e.g. "Let's break up. It's not you, it's me."
+
+                - So the goal of cryptography is to protect this communication to make it secure. So in a sense we want to
+                come up with a way to secure the transit so Bob and Alice is sure that Eve couldn't read, tamper or do anything
+                to the messages.
+
+                Scenes:
+                Alice Bob
+                Eve
+                Pipe
+            </section>
+
+
+            <section>
+                <p>Crypto system: consist of different parts needed to communicate securely.</p>
+                <ul>
+                    <li>Encryption program (E)</li>
+                    <li>Plaintext message (m)</li>
+                    <li>Encryption key (Ke)</li>
+                    <li>Ciphertext (c, c')</li>
+                    <li>Decryption program (D)</li>
+                    <li>Decryption key (Kd)</li>
+                </ul>
+                <br />
+
+                <p>Important things to note.</p>
+                <ul>
+                    <li>In modern cryptography, the security of the system purely relies upon the encryption and decryption key secret.</li>
+                    <li>Meaning we assume that E and D are public, well known</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Encryption Types</h3>
+                <ul>
+                    <li class="fragment">Symmetric <span class="fragment">Ke == Kd</span></li>
+                    <li class="fragment">Asymmetric <span class="fragment">Ke != Kd</span></li>
+                    <li class="fragment">Hashing?</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Hashing</h3>
+                <p>Message Digest, Salt Hash Function</p>
+            </section>
+
+            <section>
+                <h3>Keystore, Trust Store, Certificate Authority</h3>
+            </section>
+
+            <section>
+                <h3>Identity.jks</h3>
+            </section>
+            -->
+        </div>
+    </div>
+
+    <script src="../reveal/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            center: true,
+            history: true,
+            margin: .5
+        });
+    </script>
+</body>
+</html>
