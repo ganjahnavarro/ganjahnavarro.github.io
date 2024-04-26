@@ -67,7 +67,8 @@
 
     document.onclick = function () {
         clearInterval(interval);
-
+        
+        --timerDuration;
         document.getElementById("timer").textContent = `${timerDuration}`;
         startTimer(timerDuration);
     }
