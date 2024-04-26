@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapple</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        #timer {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+
+            font-size: 15rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+<div id="timer">...</div>
+
+<audio id="tickSound">
+    <source src="tick_second.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="explodeSound">
+    <source src="explode.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    let timerDuration = urlParams.get('duration');
+    if (timerDuration === null) {
+        timerDuration = 15;
+    }
+    document.getElementById("timer").textContent = timerDuration;
+
+    let interval;
+    let tickSound = document.getElementById("tickSound");
+    let explodeSound = document.getElementById("explodeSound");
+
+    function startTimer(duration) {
+        let timer = duration;
+        interval = setInterval(function () {
+            if (--timer <= 0) {
+                clearInterval(interval);
+                document.getElementById("timer").textContent = "Inom!";
+
+                explodeSound.play();
+            } else {
+                document.getElementById("timer").textContent = timer;
+                // Play tick sound every second
+                tickSound.play();
+            }
+        }, 1000);
+    }
+
+    document.onclick = function () {
+        clearInterval(interval);
+
+        document.getElementById("timer").textContent = `${timerDuration}`;
+        startTimer(timerDuration);
+    }
+</script>
+
+</body>
+</html>
